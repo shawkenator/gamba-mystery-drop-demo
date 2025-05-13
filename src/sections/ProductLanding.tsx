@@ -144,7 +144,7 @@ export default function ProductLanding() {
       {showDialog && (
         <div className="modal-overlay">
             <div className="modal-content">
-                <p style={{fontSize: '26px'}}>🕒 Gamba Drop #001 unlocks on <strong>June 20 @ 12PM ET</strong>.</p>
+                <p style={{fontSize: '26px'}}>🕒 Gamba Drop #001 unlocks on <strong>June 5 @ 12PM ET</strong>.</p>
                 <p  style={{fontStyle: 'italic', marginBottom: '34px'}}>You're early... but the box isn't ready to open just yet.</p>
                 <button onClick={() => setShowDialog(false)}>Close</button>
             </div>
