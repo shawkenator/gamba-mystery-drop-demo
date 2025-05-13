@@ -14,6 +14,7 @@ import Toasts from './sections/Toasts'
 import { MainWrapper, TosInner, TosWrapper } from './styles'
 import { TOS_HTML } from './constants'
 import mmcheck from './components/mmcheck'
+import ProductLanding from './sections/ProductLanding'
 function ScrollToTop() {
   const { pathname } = useLocation()
   React.useEffect(() => window.scrollTo(0, 0), [pathname])
@@ -49,6 +50,8 @@ function ErrorHandler() {
 export default function App() {
   const newcomer = useUserStore((state) => state.newcomer)
   const set = useUserStore((state) => state.set)
+  const location = useLocation()
+  const isProductPage = location.pathname === '/product'
   return (
     <>
       {newcomer && (
@@ -72,10 +75,15 @@ export default function App() {
       <MainWrapper>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/product" element={<ProductLanding />} />
           <Route path="/:gameId" element={<Game />} />
         </Routes>
-        <h2 style={{ textAlign: 'center' }}>Recent Plays</h2>
-        <RecentPlays />
+        {!isProductPage && (
+          <>
+            <h2 style={{ textAlign: 'center' }}>Recent Plays</h2>
+            <RecentPlays />
+          </>
+        )}
       </MainWrapper>
     </>
   )

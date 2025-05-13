@@ -89,6 +89,25 @@ export default function Header() {
           <Logo to="/">
             <img alt="Gamba logo" src="/logo.svg" />
           </Logo>
+          <NavLink
+            to="/product"
+            style={{
+              color: 'white',
+              fontWeight: 'bold',
+              textDecoration: 'none',
+              fontSize: '14px',
+              textTransform: 'uppercase',
+              padding: '4px 8px',
+              borderRadius: '6px',
+              background: '#ff3cac',
+              transition: 'background 0.2s',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.background = '#fff', e.currentTarget.style.color = '#000')}
+            onMouseOut={(e) => (e.currentTarget.style.background = '#ff3cac', e.currentTarget.style.color = '#fff')}
+          >
+            Limited Drop
+          </NavLink>
+
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (

@@ -1,0 +1,133 @@
+.product-page {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.product-header {
+  /* background-color: #222; */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-description {
+  font-size: 18px;
+}
+
+.product-footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.product-hero img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.product-features {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.product-features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-features li {
+  background: white;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-left: 4px solid teal;
+}
+
+.product-subtitle {
+  color: yellow;
+  font-size: 17px;
+  font-style: italic;
+  padding-top: 0px;
+  margin-top: 4px;
+}
+
+.product-title {
+  color: white;
+  font-weight: 800;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #121212;
+  border: 2px solid #03ffa4;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 40px rgba(3, 255, 164, 0.3);
+  animation: scaleIn 0.3s ease;
+}
+
+.drop-timer {
+  font-size: 14px;
+}
+
+.modal-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background: #03ffa4;
+  color: black;
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-content button:hover {
+  background: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+
+
+@media (max-width: 600px) {
+  .product-page {
+    padding: 0.5rem;
+  }
+}
